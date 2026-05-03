@@ -35,28 +35,28 @@ This project implements remote control, automatic following, and beacon-triggere
 SmartShoppingCart/
 ├── Components/
 │   ├── HAL/                    # Hardware Abstraction Layer
-│   │   ├── control.c/h         # Main control logic and motor control
-│   │   ├── uwb.c/h             # UWB communication and data processing
-│   │   ├── motor.c/h           # Motor driver and encoder handling
-│   │   ├── uart4\\\_process.c/h   # UART data queue processing
-│   │   ├── hal\\\_usart.c/h       # USART hardware abstraction
-│   │   ├── hal\\\_iic.c/h         # I2C hardware abstraction
-│   │   ├── oled\\\_i2c.c/h        # OLED display driver
-│   │   ├── tof\\\_i2c.c/h         # TOF sensor driver
-│   │   ├── timer.c/h           # Timer configuration
-│   │   ├── delay.c/h           # Delay functions
-│   │   ├── dataoperation.c/h   # Data processing utilities
-│   │   ├── Periph\\\_init.c/h     # Peripheral initialization
-│   │   └── stm32f10x\\\_it.c/h    # Interrupt handlers
+│   │   ├── control.c         # Main control logic and motor control
+│   │   ├── uwb.c             # UWB communication and data processing
+│   │   ├── motor.c           # Motor driver and encoder handling
+│   │   ├── uart4_process.c   # UART data queue processing
+│   │   ├── hal_usart.c       # USART hardware abstraction
+│   │   ├── hal_iic.c         # I2C hardware abstraction
+│   │   ├── oled_i2c.c        # OLED display driver
+│   │   ├── tof_i2c.c         # TOF sensor driver
+│   │   ├── timer.c           # Timer configuration
+│   │   ├── delay.c           # Delay functions
+│   │   ├── dataoperation.c   # Data processing utilities
+│   │   ├── Periph_init.c     # Peripheral initialization
+│   │   └── stm32f10x_it.c    # Interrupt handlers
 │   ├── OSAL/                   # Operating System Abstraction Layer
-│   │   ├── OSAL.c/h            # Core OSAL implementation
-│   │   ├── OSAL\\\_Task.c/h       # Task management
-│   │   ├── OSAL\\\_Clock.c/h      # Clock and timing services
-│   │   ├── OSAL\\\_Error.c/h      # Error handling
-│   │   └── OSAL\\\_Comdef.h       # Common definitions
+│   │   ├── OSAL.c            # Core OSAL implementation
+│   │   ├── OSAL_Task.c       # Task management
+│   │   ├── OSAL_Clock.c      # Clock and timing services
+│   │   ├── OSAL_Error.c      # Error handling
+│   │   └── OSAL_Comdef.h       # Common definitions
 │   └── Main/                   # Main application
 │       ├── main.c              # Entry point and system initialization
-│       └── stm32f10x\\\_conf.h    # STM32 configuration
+│       └── stm32f10x_conf.h    # STM32 configuration
 ├── Projects/
 │   └── USER/                   # Keil MDK project files
 │       └── RTE/                # ARM CMSIS RTE components
@@ -95,7 +95,7 @@ Key configuration options can be found in:
 
 * `Components/HAL/uwb.h`: UWB communication settings
 * `Components/HAL/control.h`: Control parameters and modes
-* `Components/Main/stm32f10x\\\_conf.h`: STM32 peripheral configuration
+* `Components/Main/stm32f10x_conf.h`: STM32 peripheral configuration
 
 ## Usage
 
@@ -150,8 +150,8 @@ The UWB communication uses a custom frame structure:
 |`control.c`|Core control logic, motor control algorithms|
 |`uwb.c`|UWB data parsing and AoA processing|
 |`motor.c`|Motor PWM control and encoder reading|
-|`oled\\\_i2c.c`|OLED display driver for status output|
-|`uart4\_process.c`|Recall function implementation|
+|`oled_i2c.c`|OLED display driver for status output|
+|`uart4_process.c`|Recall function implementation|
 
 ## Safety Considerations
 
